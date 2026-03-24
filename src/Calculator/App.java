@@ -3,13 +3,13 @@ package Calculator;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Calculator {
+public class App {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         boolean bool = true;
-        int num1 =0;
-        int num2 =0;
+        int num1;
+        int num2;
         String ea;
 
         System.out.println("계산기");
