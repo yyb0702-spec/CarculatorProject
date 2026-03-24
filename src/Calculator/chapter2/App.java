@@ -1,10 +1,9 @@
 package Calculator.chapter2;
 
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Main {
+public class App {
     public static void main(String[] args) {
 
         int num1;
