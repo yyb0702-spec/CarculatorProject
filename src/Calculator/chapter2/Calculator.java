@@ -51,8 +51,8 @@ public class Calculator {
         if(resultList.isEmpty()){
             System.out.println("계산내역이 없습니다");
         }
-        for (String carlist : resultList) {
-            System.out.println(carlist);
+        for(int i = 0; i < resultList.size(); i++){
+            System.out.println(i+1 + "." + resultList.get(i));
         }
     }
     public void removeResult(){

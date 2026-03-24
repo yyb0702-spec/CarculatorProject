@@ -72,10 +72,16 @@ public class App {
                     }
                     break;
                 case 2:
+                    sc.nextLine();
                     cal.getResultList();
+                    System.out.println("엔터를 누르면 메뉴로 돌아갑니다");
+                    sc.nextLine();
                     break;
                 case 3:
+                    sc.nextLine();
                     cal.removeResult();
+                    System.out.println("엔터를 누르면 메뉴로 돌아갑니다");
+                    sc.nextLine();
                     break;
                 case 4:
                     fix = false;
