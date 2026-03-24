@@ -80,6 +80,7 @@ public class App {
                 case 3:
                     sc.nextLine();
                     cal.removeResult();
+                    cal.getResultList();
                     System.out.println("엔터를 누르면 메뉴로 돌아갑니다");
                     sc.nextLine();
                     break;
