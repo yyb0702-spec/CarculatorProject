@@ -1,5 +1,3 @@
-package Calculator;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -31,15 +29,15 @@ public class App {
                 continue;
             }
 
-                try {
-                    System.out.println("두번째 정수를 입력해주세요 : ");
+            try {
+                System.out.println("두번째 정수를 입력해주세요 : ");
 
-                    num2 = sc.nextInt();
-                } catch (InputMismatchException e) {
-                    System.out.println("정수를 입력해주세요");
-                    sc.nextLine();
-                    continue;
-                }
+                num2 = sc.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("정수를 입력해주세요");
+                sc.nextLine();
+                continue;
+            }
 
             if (num1 < 0 || num2 < 0) {
                 System.out.println("양의정수를 입력해주세요");
