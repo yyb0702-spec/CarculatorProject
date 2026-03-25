@@ -37,7 +37,7 @@ public class App {
 
                             num1 = sc.nextDouble();
                             sc.nextLine();
-                        } catch (InputMismatchException e) {
+                        } catch (InputMismatchException e) { //예외처리
                             System.out.println("숫자를 입력해주세요");
                             sc.nextLine();//버퍼제거
                             continue; //처음으로
@@ -45,7 +45,7 @@ public class App {
                         System.out.println("연산자를 입력해주세요 (+,-,*,/) : ");
                         ea = sc.next();
                         if (!(ea.equals("+") || ea.equals("-") || ea.equals("*") || ea.equals("/"))) {
-                            System.out.println("알맞는 기호를 입력해주세요");
+                            System.out.println("알맞는 기호를 입력해주세요"); //예외처리
                             continue;//처음으로
                         }
                         try {
@@ -53,7 +53,7 @@ public class App {
 
                             num2 = sc.nextDouble();
                             sc.nextLine();
-                        } catch (InputMismatchException e) {
+                        } catch (InputMismatchException e) { //예외처리
                             System.out.println("숫자를 입력해주세요");
                             sc.nextLine();//버퍼제거
                             continue; //처음으로
@@ -84,9 +84,9 @@ public class App {
                         sc.nextLine();
                     break;
                 case 3:
-                    sc.nextLine();
+                    sc.nextLine(); //버퍼제거
                     while(true) {
-                        cal.getResultList();
+                        cal.getResultList(); //조회
                         try {
                             System.out.println("삭제하고싶은 계산기록을 입력하세요 0입력시 돌아가기");
                             int delete = sc.nextInt();

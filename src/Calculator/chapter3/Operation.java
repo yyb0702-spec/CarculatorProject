@@ -12,24 +12,24 @@ public enum Operation {
 //    SUB((a,b) -> a-b),
 //    MUL((a,b) -> a*b),
 //    DIV((a,b) -> a/b)
-    ADD("+"){
+    ADD("+"){           //ADD 객체생성
         @Override
         public double apply(double num1 , double num2)
         {return num1 + num2;}
     },
-    SUB("-"){
+    SUB("-"){                 // SUB 객체생성
         @Override
         public double apply(double num1 , double num2){
             return num1 - num2;
         }
     },
-    MUL("*"){
+    MUL("*"){           //MUL객체생성
         @Override
         public double apply(double num1 , double num2){
             return num1 * num2;
         }
     },
-    DIV("/"){
+    DIV("/"){          //DIV객체생성
         @Override
         public double apply(double num1 , double num2){
             if (num2 == 0) {
@@ -50,7 +50,7 @@ public enum Operation {
 
     public String getSymbol(){
         return symbol;
-    }
+    } //getter
 
     public abstract double apply(double num1, double num2); //심볼에 따라 개별적 처리가 필요하다
 
