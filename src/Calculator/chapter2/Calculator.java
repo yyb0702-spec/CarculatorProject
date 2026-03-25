@@ -11,7 +11,7 @@ public class Calculator {
 
     private int result;
 
-    private ArrayList<String> resultList = new ArrayList<String>();
+    private ArrayList<String> resultList = new ArrayList<String>(); //계산결과 리스트
 //생
 
 //    public Calculator(int num1, String ea, int num2)
@@ -37,8 +37,7 @@ public class Calculator {
                 result = num1 / num2;
                 break;
             default:
-                System.out.println("잘못된 연산자입니다");
-                return 0;
+                throw new IllegalArgumentException("올바른 사측연산 기호를 입력해주세요"); //예외처리
         }
 
         resultList.add(num1 + "" + ea + "" + num2 + "=" + result);
@@ -46,7 +45,7 @@ public class Calculator {
     }
 //기
 
-    public void getResultList(){
+    public void getResultList(){ //계산결과 조회
 
         if(resultList.isEmpty()){
             System.out.println("계산내역이 없습니다");
@@ -55,7 +54,7 @@ public class Calculator {
             System.out.println(i+1 + "." + resultList.get(i));
         }
     }
-    public void removeResult(){
+    public void removeResult(){ //마지막계산기록삭제 idx = 0
         resultList.remove(0);
         System.out.println("마지막 계산기록이 삭제되었습니다");
     }
