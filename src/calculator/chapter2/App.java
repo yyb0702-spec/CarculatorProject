@@ -1,4 +1,4 @@
-package Calculator.chapter2;
+package calculator.chapter2;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -55,7 +55,7 @@ public class App {
                             continue;
                         } else {
 
-                            int setresult = cal.calculator(num1,ea,num2);
+                            int setresult = cal.calculate(num1,ea,num2);
                             cal.setResult(setresult);
                             int getresult = cal.getResult();
                             System.out.println("결과값은 = " + getresult);
@@ -79,8 +79,9 @@ public class App {
                     break;
                 case 3:
                     sc.nextLine();
-                    cal.removeResult();
-                    cal.getResultList();
+                    if(cal.getResultList()) {
+                        cal.removeResult();
+                    }
                     System.out.println("엔터를 누르면 메뉴로 돌아갑니다");
                     sc.nextLine();
                     break;

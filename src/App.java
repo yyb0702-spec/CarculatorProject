@@ -63,13 +63,13 @@ public class App {
                     case "/":
                         if (num2 == 0) {
                             System.out.println("0 을 나눌수 없습니다");
+                            break;
                         } else {
                             numbox = num1 / num2;
                             System.out.println(numbox);
+                            System.out.println("결과값은 : " + numbox);
                             break;
                         }
-
-                        System.out.println("결과값은 : " + numbox);
                 }
                 System.out.println("종료하시려면 exit를 입력해주세요");
                 String exit = sc.nextLine();

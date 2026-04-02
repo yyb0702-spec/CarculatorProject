@@ -1,4 +1,4 @@
-package Calculator.chapter2;
+package calculator.chapter2;
 
 import java.util.ArrayList;
 
@@ -17,7 +17,7 @@ public class Calculator {
 //    public Calculator(int num1, String ea, int num2)
 //    {this.num1 = num1;this.ea = ea; this.num2 = num2;}
 
-    public int calculator(int num1, String ea, int num2) {
+    public int calculate(int num1, String ea, int num2) {
 
         switch (ea) {
             case "+":
@@ -45,16 +45,23 @@ public class Calculator {
     }
 //기
 
-    public void getResultList(){ //계산결과 조회
+    public boolean getResultList(){ //계산결과 조회
 
         if(resultList.isEmpty()){
             System.out.println("계산내역이 없습니다");
+            return false;
         }
         for(int i = 0; i < resultList.size(); i++){
             System.out.println(i+1 + "." + resultList.get(i));
         }
+        return true;
     }
     public void removeResult(){ //마지막계산기록삭제 idx = 0
+        if(resultList.isEmpty())
+        {
+            System.out.println("계산기록이없습니다");
+            return;
+        }
         resultList.remove(0);
         System.out.println("마지막 계산기록이 삭제되었습니다");
     }

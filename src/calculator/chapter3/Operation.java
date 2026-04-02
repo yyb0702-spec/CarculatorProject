@@ -1,4 +1,4 @@
-package Calculator.chapter3;
+package calculator.chapter3;
 
 
 //Enum 이미 만들어놓은 객체 인스턴트화 없이 바로쓸수있음 Operation 변수 = Opreration.ADD

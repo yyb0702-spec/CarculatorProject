@@ -1,4 +1,4 @@
-package Calculator.chapter3;
+package calculator.chapter3;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -23,7 +23,8 @@ public class App {
             System.out.println("1.계산하기");
             System.out.println("2.계산기록확인");
             System.out.println("3.이전기록삭제");
-            System.out.println("4.종료하기");
+            System.out.println("4.입력값보다 더 큰 결과출력");
+            System.out.println("5.종료하기");
 
             int menual = sc.nextInt();
             boolean bool = true;
@@ -59,15 +60,11 @@ public class App {
                             continue; //처음으로
                         }
 
-                        double setresult = cal.calculator(num1, ea, num2);
+                        double setresult = cal.calculate(num1, ea, num2);
                         cal.setResult(setresult);
                         double getresult = cal.getResult();
 
                         System.out.println("결과값은 = " + getresult);
-                        cal.findResult();
-
-//                        cal.getResultList();
-//                        cal.findResult();
                         System.out.println("종료하시려면 exit를 입력해주세요");
                         String exit = sc.nextLine();
                         if (exit.equals("exit")) {
@@ -105,14 +102,23 @@ public class App {
                             }
                         }
                     break;
-//                case 4:
-//                    cal.findResult();
-//                    System.out.println("돌아가시려면 skip을 입력해주세요");
-//                    skip = sc.nextLine();
-//                    if (skip.equals("skip")) {
-//                        break;
-//                    }
                 case 4:
+                    System.out.println("숫자를 입력해주세요");
+                    double selectDouble= 0;
+                    try {
+                        selectDouble = sc.nextDouble();
+                    } catch (Exception e) {
+                        System.out.println("숫자를 입력해주세요");
+                        sc.nextLine();//버퍼제거
+                        continue; //처음으로
+                    }
+                    sc.nextLine();//버퍼제거
+                    cal.findResult(selectDouble);
+                    System.out.println("엔터를 누르면 메뉴로 돌아갑니다");
+                    sc.nextLine();
+                    break;
+
+                case 5:
                     fix = false;
             }
 

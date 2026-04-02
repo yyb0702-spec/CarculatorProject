@@ -1,8 +1,7 @@
-package Calculator.chapter3;
+package calculator.chapter3;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ArithmeticCalculator<T> {
 
@@ -16,7 +15,7 @@ public class ArithmeticCalculator<T> {
 
     private double result;
 
-    public double calculator(T num1, String symbol, T num2) {
+    public double calculate(T num1, String symbol, T num2) {
 
         for (Operation op : Operation.values()) { //values =  eum의 요소들을 순서대로 enum타입의 배열로 리턴
             if (op.getSymbol().equals(symbol)) { //enum 객체를가져와서 getter함수로 심볼을 가져온후 비교
@@ -55,16 +54,16 @@ public class ArithmeticCalculator<T> {
         this.result = (double) result;
     } //setter
 
-    public void findResult() { //계산결과보다 더 높은값 출력하는 메소드
+    public void findResult(double selectDouble) { //계산결과보다 더 높은값 출력하는 메소드
         List<Double> maxlist = numlist.stream()
-                .filter(num -> num > this.result) //중간계산 람다식 num > this result
-                .collect(Collectors.toList());
+                .filter(num -> num > selectDouble) //중간계산 람다식 num > this result
+                .toList();
         if(maxlist.isEmpty())
         {
-            System.out.println("리스트에 결과값보다 더 높은 숫자가없습니다");
+            System.out.println("리스트에 입력값보다 더 높은 숫자가없습니다");
         }
         else {
-            System.out.println("저장된 연산결과중 더 큰값 :" + maxlist);
+            System.out.println("입력된 값보다 더 큰값 :" + maxlist);
         }
     }
 }
